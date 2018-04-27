@@ -10,9 +10,9 @@ vector<LexicalNode> m_lexicalNodes;			// 词法节点
 
 int Match_String(char s[])
 {
-    if(strcmp(s,"\\blank")==0) return BLANK;
-    else if(strcmp(s,"\\int")==0) return INT_OPRATOR;
-    else if(strcmp(s,"\\sum")==0) return SUM_OPRATOR;
+    if(s=="\\blank") return BLANK;
+    else if(s=="\\int") return INT_OPRATOR;
+    else if(s=="\\sum") return SUM_OPRATOR;
     else return -1;
 }
 void scanner(int &syn,char resourceProject[],char token[],int &pProject)
@@ -162,7 +162,7 @@ int Lexical_Analysis(FILE *fp, FILE *fp_output)
     {
         scanner(syn,resourceProject,token,pProject);
         //启动扫描器，执行完毕后syn中存储着该单词所对应的识别码
-        cout<<syn<<endl;
+
         if(syn==ID)//单词为标识符
         {
             for(i=0;i<1000;i++)
@@ -191,7 +191,7 @@ int Lexical_Analysis(FILE *fp, FILE *fp_output)
         }
         else if(2<=syn and syn<=11)//当前单词为对应特殊符号
         {
-            switch(syn)
+            switch(syn):
             {
             case 2:
                 AddLexicalNode(BLANK,token);
@@ -225,7 +225,7 @@ int Lexical_Analysis(FILE *fp, FILE *fp_output)
                 break;
             default:
                 break;
-            }
+            }*/
             printf("(--,%s)\n",token);
             fprintf(fp_output,"(--, %s)\n",token);
         }
@@ -250,7 +250,6 @@ void AddLexicalNode(int node_type, string value)
     LexicalNode tmp;
     tmp.type = node_type;
     tmp.val = value;
-    //cout<<tmp.val<<endl;
     // 终结符
 	if (IS_TERMINATOR(node_type))
 	{

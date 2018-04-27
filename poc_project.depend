@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1524837076 source:c:\users\rusis\documents\code\principalofcomplier\lexicalanalysisme.cpp
+	"MathForm.h"
+
+1524815152 c:\users\rusis\documents\code\principalofcomplier\mathform.h
+	<iostream>
+	<vector>
+	<algorithm>
+	<math.h>
+	<string>
+	<stack>
+	<queue>
+	<fstream>
+	<time.h>
+	<string.h>
+
+1524837237 source:c:\users\rusis\documents\code\principalofcomplier\main.cpp
+	"MathForm.h"
+
+1524835778 source:c:\users\rusis\documents\code\principalofcomplier\grammar_ans.cpp
+	"MathForm.h"
+

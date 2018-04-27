@@ -101,15 +101,21 @@ typedef struct PropertyNode
 	~PropertyNode(){};
 }PropertyNode;		// 属性结点
 
+void Error(string errorInfo)
+{
+	cout << "输入表达式错误,在字符串\"" << errorInfo << "\"之后出错." << endl << endl;
+	exit(0);
 
+	return;
+}
 
-/*void Error(char errorInfo)
+void Error(char errorInfo)
 {
 	cout << "输入表达式错误,在字符\'" << errorInfo << "\'之后出错." << endl << endl;
 	exit(0);
 
 	return;
-}*/
+}
 /*LexicalNode m_head;
 exicalNode *m_tail;*/
 #endif // MATHFORM_H_INCLUDED

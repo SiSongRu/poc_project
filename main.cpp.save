@@ -6,7 +6,7 @@ void Grammar_Analysis();
 int main()
 {
     FILE *fp, *fp_output;
-    if((fp=fopen("C:\\Users\\rusis\\Documents\\code\\PrincipalOfComplier\\test_file\\test05.txt","r"))==NULL)
+    if((fp=fopen("C:\\Users\\rusis\\Documents\\code\\PrincipalOfComplier\\test_file\\test06.txt","r"))==NULL)
     {
         printf("can't find the file!");
         exit(0);
@@ -16,10 +16,15 @@ int main()
         printf("can't find the file!");
         exit(0);
     }
-    Lexical_Analysis(fp, fp_output);
+    //Lexical_Analysis(fp, fp_output);
     fclose(fp);
     fclose(fp_output);
-    Grammar_Analysis();
+    //Grammar_Analysis();
+    char *string1 = "\\int hello";
+    char *string2;
+    cin>>string2;
+    cout<<string1<<endl;
+    cout<<string2<<strcmp(string1,string2)<<endl;
 
     return 0;
 }

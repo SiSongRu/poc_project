@@ -1,0 +1,41 @@
+S->#B#
+B->TB'
+B'->TB'
+B'->$
+T->id T'
+T->num T'
+T->\blank T'
+T->(B)T'
+T->\int{B}{B}{B}T'
+T->\sum{B}{B}{B}T'
+T'->_F
+T'->^{B}
+T'->$
+F->{B}
+F->^BB
+
+
+S->#B#
+B->TC
+C->TC
+C->$
+T->iN
+T->nN
+T->bN
+T->(B)N
+T->t{B}{B}{B}N
+T->s{B}{B}{B}N
+N->_F
+N->^{B}
+N->$
+F->{B}
+F->^BB
+
+
+	id	num	\blank	(	)	\int	\sum	_	^	{	}	$	#
+S												0		
+B	1	1	1	1	1	1	1					
+B'	2	2	2	2	3	2	2				3	3
+T	4	5	6	7		8	9
+T'	12	12	12	12	12	12	12	10	11		12	12			
+F									14	13
